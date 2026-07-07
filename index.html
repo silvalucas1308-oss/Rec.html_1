@@ -3,51 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empatia e Cooperação</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <header class="header">
-        <h1>Empatia & Cooperação</h1>
-        <p>Construindo pontes para um mundo mais humano</p>
-    </header>
-
-    <main class="container">
-        <section class="card-section">
-            <div class="card item-empatia">
-                <h2>Empatia</h2>
-                <p>Sentir o que o outro sente. Validar emoções. Ouvir sem julgar e compreender diferentes realidades de forma genuína.</p>
-            </div>
-
-            <div class="card item-cooperacao">
-                <h2>Cooperação</h2>
-                <p>Agir em conjunto. Somar forças por um objetivo comum. Entender que o crescimento coletivo fortalece a todos.</p>
-            </div>
-        </section>
-
-        <section class="frase-impacto">
-            <blockquote>
-                "A empatia é o motor que nos conecta; a cooperação é a ferramenta que nos faz avançar juntos."
-            </blockquote>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p>&copy; 2026 - Conexão Humana. Todos os direitos reservados.</p>
-    </footer>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empatia e Cooperação</title>
+    <title>Empatia & Cooperação | Cultura Organizacional</title>
     <style>
-        /* Estilos Globais */
+        /* Variáveis de Design Corporativo */
+        :root {
+            --cor-primaria: #0f4c81;     /* Azul Clássico/Corporativo */
+            --cor-secundaria: #17a2b8;   /* Teal Moderno */
+            --cor-fundo-escuro: #1a202c; /* Cinza Escuro Premium */
+            --cor-fundo-claro: #f8fafc;  /* Off-White Descansado */
+            --cor-texto: #334155;        /* Grafite de Alta Legibilidade */
+            --cor-texto-claro: #64748b;  /* Cinza para Textos Secundários */
+            --sombra-suave: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+            --sombra-card: 0 4px 20px rgba(0, 0, 0, 0.03);
+            --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Reset e Configurações de Escopo Global */
         * {
             margin: 0;
             padding: 0;
@@ -55,109 +26,170 @@
         }
 
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #f7f9fa;
-            color: #333333;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--cor-fundo-claro);
+            color: var(--cor-texto);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Estrutura de Blocos (divs) */
+        /* Cabeçalho Estilo Hero */
         .cabecalho {
-            background-color: #e3fafc;
-            text-align: center;
-            padding: 40px 20px;
-            border-bottom: 2px solid #c5f6fa;
-        }
-
-        .conteudo {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .bloco-texto {
-            margin-bottom: 30px;
-        }
-
-        .rodape {
-            background-color: #2b303a;
+            background: linear-gradient(135deg, #0f4c81 0%, #1e3a8a 100%);
             color: #ffffff;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
+            padding: 100px 20px;
+            position: relative;
         }
 
-        /* Tipografia */
-        h1 {
-            color: #0c8599;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 1.1rem;
+        .cabecalho h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.05em;
             margin-bottom: 15px;
-            color: #495057;
+            line-height: 1.2;
         }
 
-        /* Lista e Links */
+        .cabecalho p {
+            font-size: 1.25rem;
+            color: #93c5fd;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* Container de Conteúdo Centralizado */
+        .conteudo {
+            max-width: 900px;
+            margin: -40px auto 60px auto;
+            padding: 50px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: var(--sombra-suave);
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Elementos de Texto */
+        .bloco-texto {
+            margin-bottom: 45px;
+        }
+
+        .bloco-texto p {
+            font-size: 1.15rem;
+            margin-bottom: 24px;
+            color: var(--cor-texto);
+        }
+
+        .bloco-texto p.chamada {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--cor-texto-claro);
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Lista Baseada em Grid Moderna (Cards Interativos) */
         ul {
             list-style-type: none;
-            padding-left: 0;
-            margin-top: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 10px;
         }
 
         li {
-            background-color: #f1f3f5;
-            margin-bottom: 10px;
-            padding: 12px 20px;
-            border-radius: 6px;
-            border-left: 5px solid #15aabf;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            box-shadow: var(--sombra-card);
+            transition: var(--transicao);
+            overflow: hidden;
         }
 
+        li:hover {
+            transform: translateY(-4px);
+            border-color: var(--cor-secundaria);
+            box-shadow: 0 12px 25px rgba(23, 162, 184, 0.1);
+        }
+
+        /* Links Estilizados como Blocos Inteiros */
         a {
-            color: #15aabf;
+            color: var(--cor-primaria);
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            font-size: 1.1rem;
             display: block;
+            padding: 25px 20px;
+            text-align: center;
+            transition: var(--transicao);
         }
 
-        a:hover {
-            color: #0c8599;
-            text-decoration: underline;
+        li:hover a {
+            color: var(--cor-secundaria);
+        }
+
+        /* Rodapé Profissional */
+        .rodape {
+            background-color: var(--cor-fundo-escuro);
+            color: #94a3b8;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.95rem;
+            border-top: 1px solid #334155;
+        }
+
+        .rodape p {
+            color: #94a3b8;
+        }
+
+        /* Ajustes de Responsividade */
+        @media (max-width: 768px) {
+            .cabecalho {
+                padding: 60px 20px;
+            }
+            .cabecalho h1 {
+                font-size: 2.2rem;
+            }
+            .conteudo {
+                margin: -20px 20px 40px 20px;
+                padding: 30px 20px;
+            }
+            ul {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="cabecalho">
-        <h1>Empatia e Cooperação</h1>
-        <p>Construindo conexões humanas mais fortes e colaborativas.</p>
+        <h1>Empatia & Cooperação</h1>
+        <p>Desenvolvendo ambientes colaborativos e conexões humanas significativas.</p>
     </div>
 
     <div class="conteudo">
         
         <div class="bloco-texto">
-            <p>A empatia é a capacidade de compreender e compartilhar os sentimentos dos outros. Ela nos permite enxergar o mundo através de uma perspectiva diferente da nossa, gerando acolhimento e respeito mútuo.</p>
-            <p>Quando unimos a empatia à cooperação, transformamos o ambiente ao nosso redor. Cooperar significa agir em conjunto para alcançar um objetivo comum, entendendo que o sucesso coletivo beneficia a todos.</p>
-        </div>
-
-        <div class="bloco-texto">
-            <p>Clique nos tópicos abaixo para explorar ações práticas baseadas nesses valores:</p>
+            <p>No cenário social e corporativo contemporâneo, a <strong>empatia</strong> consolidou-se como a competência fundamental para a resolução de conflitos. Ela nos capacita a decodificar necessidades implícitas e validar a perspectiva do outro sem julgamentos precipitados.</p>
+            <p>Quando essa percepção é associada a sistemas estruturados de <strong>cooperação</strong>, criamos ecossistemas sustentáveis. Cooperar otimiza processos, distribui responsabilidades com equidade e potencializa a inteligência coletiva.</p>
+            
+            <p class="chamada">Diretrizes Práticas de Implementação</p>
+            
             <ul>
-                <li><a href="#escuta">Praticar a Escuta Ativa</a></li>
-                <li><a href="#apoio">Oferecer Apoio sem Julgamentos</a></li>
-                <li><a href="#trabalho">Fortalecer o Trabalho em Equipe</a></li>
+                <li><a href="#escuta">Cultura de Escuta Ativa</a></li>
+                <li><a href="#apoio">Comunicação Não Violenta</a></li>
+                <li><a href="#trabalho">Sinergia Operacional</a></li>
             </ul>
         </div>
 
     </div>
 
     <div class="rodape">
-        <p>&copy; 2026 - Espaço Compartilhado. Criado com foco na união.</p>
+        <p>&copy; 2026 Inteligência Social. Todos os direitos reservados à governança colaborativa.</p>
     </div>
 
 </body>
