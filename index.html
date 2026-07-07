@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empatia e Cooperação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Empatia & Cooperação</h1>
+        <p>Construindo pontes para um mundo mais humano</p>
+    </header>
+
+    <main class="container">
+        <section class="card-section">
+            <div class="card item-empatia">
+                <h2>Empatia</h2>
+                <p>Sentir o que o outro sente. Validar emoções. Ouvir sem julgar e compreender diferentes realidades de forma genuína.</p>
+            </div>
+
+            <div class="card item-cooperacao">
+                <h2>Cooperação</h2>
+                <p>Agir em conjunto. Somar forças por um objetivo comum. Entender que o crescimento coletivo fortalece a todos.</p>
+            </div>
+        </section>
+
+        <section class="frase-impacto">
+            <blockquote>
+                "A empatia é o motor que nos conecta; a cooperação é a ferramenta que nos faz avançar juntos."
+            </blockquote>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 - Conexão Humana. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.header {
+    background: linear-gradient(135deg, #a8dadc, #457b9d);
+    color: #ffffff;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Conteúdo Principal */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Seção de Cards */
+.card-section {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.card {
+    flex: 1;
+    min-width: 280px;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border-top: 5px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.item-empatia {
+    border-top-color: #e63946;
+}
+
+.item-cooperacao {
+    border-top-color: #2a9d8f;
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #264653;
+}
+
+/* Bloco de Frase */
+.frase-impacto {
+    text-align: center;
+    background-color: #e76f51;
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    font-style: italic;
+    font-size: 1.3rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #264653;
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+/* Responsividade Básica */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .card-section {
+        flex-direction: column;
+    }
+}
+
